@@ -185,6 +185,10 @@ a:focus {
   color: #FFFFFF;
   cursor: pointer;
 }
+.main_block {
+  background: url("../img/bg.png") no-repeat center center;
+  background-size: cover;
+}
 .main_blocks {
   display: flex;
   justify-content: space-between;
@@ -308,4 +312,34 @@ form a {
   outline: none;
   text-decoration: none;
   border-bottom: 1px dashed #37A7D5;
+}
+.slider_navigation {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.slider_navigation_arrow {
+  cursor: pointer;
+  margin: 0 3px;
+}
+.slider_navigation_arrow img {
+  fill: #D9D9D9;
+}
+.slider_block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.slider_block_person {
+  width: 45%;
+  aspect-ratio: 1.77777778;
+  box-shadow: 0px 6px 8px -6px rgba(24, 39, 75, 0.12), 0px 8px 16px -6px rgba(24, 39, 75, 0.08);
+  border-radius: 20px;
+}
+.slider_navigation_arrow .first_path {
+  fill: #62BFFF ;
+  fill-opacity: 1;
+}
+.slider_navigation .swiper-button-disabled .first_path {
+  fill: #D9D9D9 ;
+  fill-opacity: 0.4;
 }

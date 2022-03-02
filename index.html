@@ -6,6 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -43,7 +47,47 @@
 
 
                     <div class="slider">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="slider_block">
+                                        <div style="background: url('./img/slide.jpg')" class="slider_block_person">
 
+                                        </div>
+                                        <div style="background: url('./img/slide.jpg')" class="slider_block_person">
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider_block">
+                                        <div style="background: url('./img/slide.jpg')" class="slider_block_person">
+
+                                        </div>
+                                        <div style="background: url('./img/slide.jpg')" class="slider_block_person">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="slider_navigation">
+
+                        <div class="slider_navigation_next slider_navigation_arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="36" viewBox="0 0 48 36" fill="none">
+                                <path class="first_path" d="M48 18C48 8.05888 39.9411 0 30 0H0V36H30C39.9411 36 48 27.9411 48 18Z" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4621 12.3371C21.8282 11.971 22.4218 11.971 22.7879 12.3371L27.7879 17.3371C28.154 17.7032 28.154 18.2968 27.7879 18.6629L22.7879 23.6629C22.4218 24.029 21.8282 24.029 21.4621 23.6629C21.096 23.2968 21.096 22.7032 21.4621 22.3371L25.7992 18L21.4621 13.6629C21.096 13.2968 21.096 12.7032 21.4621 12.3371Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="slider_navigation_prev slider_navigation_arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="36" viewBox="0 0 48 36" fill="none" >
+                                <path class="first_path" d="M0 18C0 8.05888 8.05888 0 18 0H48V36H18C8.05888 36 0 27.9411 0 18Z" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.5379 12.3371C26.1718 11.971 25.5782 11.971 25.2121 12.3371L20.2121 17.3371C19.846 17.7032 19.846 18.2968 20.2121 18.6629L25.2121 23.6629C25.5782 24.029 26.1718 24.029 26.5379 23.6629C26.904 23.2968 26.904 22.7032 26.5379 22.3371L22.2008 18L26.5379 13.6629C26.904 13.2968 26.904 12.7032 26.5379 12.3371Z" fill="white"/>
+                            </svg>
+                        </div>
                     </div>
 
 
@@ -75,6 +119,8 @@
 </main>
 
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>

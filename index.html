@@ -23,6 +23,30 @@
                     <h1>
                         Комплексное оснащение медицинского учреждения по ценам производителя
                     </h1>
+                    <div class="mobile_form">
+                        <div class="form_block">
+                            <h3 class="title_form">
+                                Оставьте заявку на персональное<br> КП прямо сейчас и получите<br>
+                                <span>дизайн-проект оснащения в подарок</span>
+                            </h3>
+                            <form action="#">
+                                <input type="text" maxlength="18" placeholder="Введите Ваше Имя" class="form_input">
+                                <input type="text" id="phone_mask_second" placeholder="+7 (___) ___-__-__" class="form_input">
+                                <input type="text" placeholder="Введите Ваш e-mail"  class="form_input">
+                                <div class="form_button_block">
+                                    <button class="form_button button">Отправить</button>
+                                </div>
+                                <div class="form_check">
+
+                                    <input checked name="check" id="check_second" class="custom-checkbox" type="checkbox">
+                                    <label for="check_second"></label>
+                                    <p class="">Я ознакомлен и согласен с</p>
+                                </div>
+                                <a href="#">Политика конфиденциальности</a>
+                            </form>
+                            <img src="./img/bonus.svg" alt="" class="form_absolute_img">
+                        </div>
+                    </div>
                     <div class="main_parametrs_block">
                         <div class="main_parametrs">
                             <span>100%</span>
@@ -47,29 +71,45 @@
 
 
                     <div class="slider">
-                        <div class="swiper mySwiper">
+                        <div class="swiper mySwiper_first">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="slider_block">
-                                        <div style="background: url('./img/slide.jpg')" class="slider_block_person">
+                                        <div style="background: url('./img/slide.jpg') no-repeat center center" class="slider_block_person">
 
                                         </div>
-                                        <div style="background: url('./img/slide.jpg')" class="slider_block_person">
 
-                                        </div>
 
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="slider_block">
-                                        <div style="background: url('./img/slide.jpg')" class="slider_block_person">
+                                        <div style="background: url('./img/slide.jpg') no-repeat center center" class="slider_block_person">
 
                                         </div>
-                                        <div style="background: url('./img/slide.jpg')" class="slider_block_person">
 
-                                        </div>
+
                                     </div>
                                 </div>
+                                <div class="swiper-slide">
+                                    <div class="slider_block">
+                                        <div style="background: url('./img/slide.jpg') no-repeat center center" class="slider_block_person">
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider_block">
+                                        <div style="background: url('./img/slide.jpg') no-repeat center center" class="slider_block_person">
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
                             </div>
 
                         </div>
@@ -92,25 +132,28 @@
 
 
                 </div>
-                <div class="main_right_block">
+                <div class="main_right_block desktop_form">
                     <div class="form_block">
                         <h3 class="title_form">
                             Оставьте заявку на персональное<br> КП прямо сейчас и получите<br>
                             <span>дизайн-проект оснащения в подарок</span>
                         </h3>
                         <form action="#">
-                            <input type="text" placeholder="Введите Ваше Имя" class="form_input">
-                            <input type="text" class="form_input">
+                            <input type="text" maxlength="18" placeholder="Введите Ваше Имя" class="form_input">
+                            <input type="text" id="phone_mask" placeholder="+7 (___) ___-__-__" class="form_input">
                             <input type="text" placeholder="Введите Ваш e-mail"  class="form_input">
                             <div class="form_button_block">
                                 <button class="form_button button">Отправить</button>
                             </div>
                             <div class="form_check">
-                                <input checked type="checkbox">
+
+                                <input checked name="check" id="check" class="custom-checkbox" type="checkbox">
+                                <label for="check"></label>
                                 <p class="">Я ознакомлен и согласен с</p>
                             </div>
                             <a href="#">Политика конфиденциальности</a>
                         </form>
+                        <img src="./img/bonus.svg" alt="" class="form_absolute_img">
                     </div>
                 </div>
             </div>
@@ -121,6 +164,7 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="./js/jquery.maskedinput.min.js"></script>
 <script src="./js/main.js"></script>
 </body>
 </html>

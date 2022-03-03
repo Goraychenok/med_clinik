@@ -582,6 +582,116 @@ form a{
     color: #333333;
   }
 }
+.projects{
+  &_title{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 43px;
+    color: #333333;
+    max-width: 60%;
+    margin-bottom: 60px;
+    span{
+      color: @blue;
+    }
+  }
+  &_slider{
+    position: relative;
+    &_main{
+      &_navigation{
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      &_all{
+        &_left{
+          width: 45%;
+          &_slide{
+            text-align: center;
+            img{
+              width: 680px;
+              border-radius: 20px;
+              aspect-ratio: 16/16 !important;
+            }
+          }
+        }
+        &_bottom{
+          &_slide{
+            cursor: pointer;
+            &:hover{
+
+            }
+            img{
+
+              width: 190px;
+              border-radius: 20px;
+              aspect-ratio: 16/16 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+&_dov{
+  &_block{
+    h5{
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 43px;
+      color: #62BFFF;
+      margin-bottom: 60px;
+    }
+    &_slide{
+      background: linear-gradient(40.84deg, #62BFFF 60.72%, rgba(98, 191, 255, 0.19) 174.18%);
+      border-radius: 10px;
+      box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12), 0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+      padding: 15px;
+      p{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+  }
+  &_wrapper{
+    margin-bottom: 60px;
+  }
+}
+}
+.mySwiper2{
+  margin-bottom: 30px;
+}
+.mySwiper{
+  padding-bottom: 40px;
+}
+.swiper-scrollbar-drag{
+  background: @blue;
+}
+
+.swiper-pagination-bullet{
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  background: #D9D9D9;
+}
+
+.swiper-pagination-bullet-active {
+  background: #62bfff;
+  box-shadow: 0em 0 5px 5px rgba(98,191,255, 0.5);
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 10px;
+}
+
 @media (max-width: 1500px) {
   .container{
     max-width: 1100px;

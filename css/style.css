@@ -762,6 +762,78 @@ form a {
 .documents_mobile_block {
   display: none;
 }
+.delivery {
+  background: linear-gradient(39.83deg, #f5fdff 1.82%, #fafafa 94.46%, #f3fdff 94.46%);
+}
+.delivery_title {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 43px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+.delivery_subtitle {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 60px;
+  color: #62bfff;
+}
+.delivery_blocks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.delivery_block_left {
+  width: 40%;
+}
+.delivery_block_left img {
+  width: 100%;
+}
+.delivery_block_right {
+  width: 53%;
+}
+.delivery_block_right h5 {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 560px;
+  color: #000;
+  margin-bottom: 20px;
+}
+.delivery_block_logoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.delivery_block_logoes img {
+  margin: 0 10px;
+}
+.delivery_block_logoes p {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  margin-left: 10px;
+}
+.delivery_button {
+  padding: 17px 60px;
+  border: 2px solid #62BFFF;
+  background: #62BFFF;
+  transition: 0.3s ease-in-out;
+}
+.delivery_button:hover {
+  box-shadow: 0px 4px 6px rgba(7, 145, 240, 0.5);
+}
 @media (max-width: 1500px) {
   .container {
     max-width: 1100px;
@@ -837,6 +909,20 @@ form a {
     font-size: 16px;
     line-height: 24px;
     color: #333333;
+    margin-bottom: 30px;
+  }
+  .delivery_blocks {
+    flex-wrap: wrap;
+  }
+  .delivery_block_left {
+    width: 75%;
+    order: 2;
+  }
+  .delivery_block_right {
+    width: 87%;
+    order: 1;
+  }
+  .delivery_button {
     margin-bottom: 30px;
   }
 }
@@ -961,5 +1047,35 @@ form a {
   }
   .documents_slider_block_top {
     justify-content: center;
+  }
+  .delivery_title {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .delivery_subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  .delivery_block_left {
+    width: 100%;
+  }
+  .delivery_block_left h5 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  .delivery_block_right {
+    width: 100%;
+  }
+  .delivery_block_logoes {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .delivery_block_logoes img {
+    width: 30%;
+  }
+  .delivery_button {
+    margin-bottom: 20px;
   }
 }

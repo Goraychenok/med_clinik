@@ -927,6 +927,81 @@ background-image: url("../img/plus.png");
     }
   }
 }
+.delivery{
+  background: linear-gradient(39.83deg, #F5FDFF 1.82%, #FAFAFA 94.46%, #F3FDFF 94.46%);
+  &_title{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 43px;
+    color: @black;
+    margin-bottom: 15px;
+  }
+  &_subtitle{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 60px;
+    color: @blue;
+  }
+  &_blocks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_block{
+    &_left{
+      width: 40%;
+      img{
+        width: 100%;
+      }
+    }
+    &_right{
+      width: 53%;
+      h5{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 560px;
+        color: #000;
+        margin-bottom: 20px;
+      }
+    }
+    &_logoes{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      img{
+        margin: 0 10px;
+      }
+      p{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000;
+        margin-left: 10px;
+      }
+    }
+  }
+  &_button{
+    padding: 17px 60px;
+    border: 2px solid #62BFFF;
+    background: #62BFFF;
+    transition: 0.3s ease-in-out;
+    &:hover{
+      box-shadow: 0px 4px 6px rgba(7, 145, 240, 0.5);
+    }
+  }
+}
+
 
 @media (max-width: 1500px) {
   .container{
@@ -1020,6 +1095,24 @@ background-image: url("../img/plus.png");
         color: #333333;
         margin-bottom: 30px;
       }
+    }
+  }
+  .delivery{
+    &_blocks{
+      flex-wrap: wrap;
+    }
+    &_block{
+      &_left{
+        width: 75%;
+        order: 2;
+      }
+      &_right{
+        width: 87%;
+        order: 1;
+      }
+    }
+    &_button{
+      margin-bottom: 30px;
     }
   }
 }
@@ -1172,6 +1265,40 @@ background-image: url("../img/plus.png");
           justify-content: center;
         }
       }
+    }
+  }
+  .delivery{
+    &_title{
+      font-size: 28px;
+      line-height: 35px;
+    }
+    &_subtitle{
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+    &_block{
+      &_left{
+        width: 100%;
+        h5{
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 20px;
+        }
+      }
+      &_right{
+        width: 100%;
+      }
+      &_logoes{
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        img{
+          width: 30%;
+        }
+      }
+    }
+    &_button{
+      margin-bottom: 20px;
     }
   }
 }

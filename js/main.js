@@ -87,7 +87,7 @@ var swiper = new Swiper(".docSlider", {
     jQuery(function($){
         $("#phone_mask_second").mask("+7 (999) 999-99-99");
         $("#phone_mask").mask("+7 (999) 999-99-99");
-        //$("#phone-mask-two").mask("+7 (999) 999-99-99");
+        $("#back_link_phone").mask("+7 (999) 999-99-99");
     });
 
 

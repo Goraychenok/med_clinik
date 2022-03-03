@@ -55,7 +55,6 @@ var swiper2 = new Swiper(".projects_slider_main", {
 
 var swiper5 = new Swiper(".projects_slider_four", {
     slidesPerView: 4,
-    spaceBetween: 30,
     loop: true,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -64,6 +63,16 @@ var swiper5 = new Swiper(".projects_slider_four", {
     pagination: {
         el: ".swiper-pagination",
     },
+});
+
+var swiper = new Swiper(".docSlider", {
+    loop: true,
+    allowTouchMove: false,
+    navigation: {
+        nextEl: ".slider_doc_next",
+        prevEl: ".slider_doc_prev",
+    },
+
 });
 
 

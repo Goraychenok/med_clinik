@@ -23,47 +23,52 @@
 
 var swiper2 = new Swiper(".projects_slider_main", {
     spaceBetween: 30,
-    loop: true,
+    allowTouchMove: false,
     navigation: {
         nextEl: ".slider_project_navigation_next",
         prevEl: ".slider_project_navigation_prev",
     },
 });
 
+    var swperThumb = []
+    var swiperTop = []
 
-    var swiper3 = new Swiper(".mySwiper", {
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: 3,
-    freeMode: true,
-    watchSlidesProgress: true,
-        scrollbar: {
-            el: ".swiper-scrollbar",
+    $(".gallery-thumb").each(function (i) {
+        console.log($(this))
+        swperThumb[i] = new Swiper($(this)[0], {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 3,
+            freeMode: true,
+            watchSlidesProgress: true,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+            },
+        });
+
+
+    })
+
+$(".gallery-top").each(function (i) {
+    swiperTop[i] =  new Swiper($(this)[0], {
+        loop: true,
+        spaceBetween: 10,
+        /*
+        navigation: {
+            nextEl: $(this).find('.swiper-button-next')[0],
+            prevEl: ".swiper-button-prev",
         },
-});
-    var swiper4 = new Swiper(".mySwiper2", {
-    loop: true,
-    spaceBetween: 10,
-    navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-},
-    thumbs: {
-    swiper: swiper3,
-},
-});
 
-var swiper5 = new Swiper(".projects_slider_four", {
-    slidesPerView: 4,
-    loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-    },
-});
+         */
+        thumbs: {
+            swiper: swperThumb[i],
+        },
+    });
+})
+
+
+
+
 
 var swiper = new Swiper(".docSlider", {
     loop: true,

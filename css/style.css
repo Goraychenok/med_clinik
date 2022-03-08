@@ -1003,8 +1003,7 @@ form a {
   padding: 17px 32px !important;
 }
 .back_link {
-  background: url("../img/back_bg.png") no-repeat center center;
-  background-size: cover;
+  background: #002C69;
 }
 .back_link_title {
   font-family: Gilroy;
@@ -1012,8 +1011,8 @@ form a {
   font-weight: bold;
   font-size: 32px;
   line-height: 43px;
-  color: #D62D30;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 .back_link_blocks {
   display: flex;
@@ -1026,23 +1025,22 @@ form a {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #333333;
+  color: #ffffff;
 }
 .back_link_button {
-  color: #D62D30;
-  margin: 2px 2px 16px 2px;
+  margin-bottom: 16px;
+  background: #D62D30;
+  color: #ffffff;
+  border: 2px solid #D62D30;
 }
 .back_link_button:hover {
+  border: 2px solid #D62D30;
   filter: drop-shadow(0px 4px 6px rgba(214, 45, 48, 0.5));
-  margin: 2px 2px 14px 2px;
-  border: 3px solid #D62D30;
+  border-radius: 30px;
 }
 .back_link_button:active {
   color: #ffffff;
-  background: #D62D30;
   filter: drop-shadow(0px 4px 6px rgba(214, 45, 48, 0.5));
-  margin: 0px 0px 14px 0px;
-  border: 3px solid #D62D30;
 }
 .back_link_pol_block {
   display: flex;
@@ -1054,7 +1052,11 @@ form a {
   font-weight: normal;
   font-size: 12px;
   line-height: 14px;
-  color: #333333;
+  color: #ffffff;
+}
+.back_link_pol_block p a {
+  color: #ffffff;
+  border-bottom: 1px dashed #ffffff;
 }
 .back_link_pol_block input {
   position: absolute;
@@ -1068,7 +1070,7 @@ form a {
   height: 1.2em;
   flex-shrink: 0;
   flex-grow: 0;
-  border: 1px solid #adb5bd;
+  border: 1px solid #ffffff;
   border-radius: 0.25em;
   margin-right: 0.5em;
   background-repeat: no-repeat;
@@ -1076,9 +1078,9 @@ form a {
   background-size: 50% 50%;
 }
 .back_link_pol_block input:checked + label::before {
-  border-color: #D62D30;
-  background-color: #D62D30;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  border-color: #ffffff;
+  background-color: #ffffff;
+  background-image: url("../img/icons/Polygon.png");
 }
 .back_link_input {
   width: 26% ;

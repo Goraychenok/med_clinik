@@ -1099,6 +1099,23 @@ background-image: url("../img/plus.png");
       img{
         width: 100%;
       }
+      &_phone{
+        display: flex;
+        align-items: center;
+        img{
+          max-width: 38px;
+          margin-right: 15px;
+        }
+        a{
+          font-family: Gilroy;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 40px;
+          line-height: 130%;
+          color: #002C69;
+          text-decoration: none;
+        }
+      }
     }
     &_right{
       width: 53%;
@@ -1139,6 +1156,31 @@ background-image: url("../img/plus.png");
     transition: 0.3s ease-in-out;
     &:hover{
       box-shadow: 0px 4px 6px rgba(7, 145, 240, 0.5);
+    }
+  }
+  &_form{
+    &_bottom{
+      h5{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        max-width: 480px;
+        margin-bottom: 30px;
+        color: #ffffff;
+      }
+      .pluses_form_block{
+        padding: 40px 30px;
+        max-width: 100%;
+        display: block;
+      }
+      .form_block_button{
+        width: 44%;
+        button{
+          padding: 17px 32px !important;
+        }
+      }
     }
   }
 }
@@ -1355,14 +1397,27 @@ background-image: url("../img/plus.png");
       &_left{
         width: 75%;
         order: 2;
+        &_phone{
+          display: none;
+        }
       }
       &_right{
-        width: 87%;
+        width: 100%;
         order: 1;
       }
     }
     &_button{
       margin-bottom: 30px;
+    }
+    &_form{
+      &_bottom{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+        .pluses_form_block{
+          max-width: 60%;
+        }
+      }
     }
   }
   .back_link{
@@ -1592,6 +1647,13 @@ background-image: url("../img/plus.png");
     }
     &_button{
       margin-bottom: 20px;
+    }
+    &_form{
+      &_bottom{
+        .pluses_form_block{
+          max-width: 100%;
+        }
+      }
     }
   }
   .back_link{

@@ -93,6 +93,7 @@ var swiper = new Swiper(".docSlider", {
         $("#phone_mask").mask("+7 (999) 999-99-99");
         $("#back_link_phone").mask("+7 (999) 999-99-99");
         $("#pluses_phone").mask("+7 (999) 999-99-99");
+        $("#delivery_phone").mask("+7 (999) 999-99-99");
     });
 
 

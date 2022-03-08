@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="form_check">
 
-                                    <input checked name="check" id="check_second" class="custom-checkbox" type="checkbox">
+                                    <input checked name="check" required id="check_second" class="custom-checkbox" type="checkbox">
                                     <label for="check_second"></label>
                                     <p class="">Я ознакомлен и согласен с</p>
                                 </div>
@@ -147,7 +147,7 @@
                             </div>
                             <div class="form_check">
 
-                                <input checked name="check" id="check" class="custom-checkbox" type="checkbox">
+                                <input checked name="check" required id="check" class="custom-checkbox" type="checkbox">
                                 <label for="check"></label>
                                 <p class="">Я ознакомлен и согласен с</p>
                             </div>
@@ -334,6 +334,8 @@
 
 
 
+
+
         </div>
     </section>
 
@@ -375,7 +377,33 @@
                     <p>Сами привезем</p>
                 </div>
             </div>
+
+            <div class="pluses_form_bottom">
+                <div class="pluses_form_block form_block">
+                    <h5>Узнайте о всех выгодах сотрудничества прямо сейчас</h5>
+                    <form action="#">
+                        <input type="text" maxlength="18" placeholder="Введите Ваше Имя" class="form_input pluses_input">
+                        <input type="text" id="pluses_phone" placeholder="+7 (___) ___-__-__" class="form_input pluses_input">
+                        <input type="text" placeholder="Введите Ваш e-mail"  class="form_input pluses_input inpit_email">
+                        <div class="form_block_button">
+                            <button class="button form_button pluses_form_button">Узнать все выгоды!</button>
+                            <div class="pluses_check_block">
+                                <input checked required type="checkbox" name="" id="plus_form_check">
+                                <label for="plus_form_check"></label>
+                                <p>Я ознакомлен и согласен с <a href="#">Политикой конфиденциальности</a></p>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+
+
         </div>
+
+
     </section>
 
     <section class="section documents">
@@ -493,7 +521,7 @@
                             Отправить
                         </button>
                         <div class="back_link_pol_block">
-                            <input checked type="checkbox" name="" id="back_link_check">
+                            <input checked required type="checkbox" name="" id="back_link_check">
                             <label for="back_link_check"></label>
                             <p>Я ознакомлен и согласен с <a href="#">Политикой конфиденциальности</a></p>
                         </div>

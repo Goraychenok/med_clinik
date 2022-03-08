@@ -633,6 +633,7 @@ form a {
 .pluses_subtitle_blocks {
   display: flex;
   justify-content: center;
+  margin-bottom: 60px;
 }
 .pluses_subtitle_block {
   background: #FFFFFF;
@@ -650,6 +651,95 @@ form a {
   line-height: 22px;
   text-align: center;
   color: #333333;
+}
+.pluses_form_block {
+  padding: 40px 96px;
+  background: rgba(98, 191, 255, 0.8);
+  box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12), 0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+  border-radius: 30px;
+  border: 1px solid #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 60%;
+}
+.pluses_form_block h5 {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  max-width: 480px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.pluses_form_block form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: start;
+}
+.pluses_form_block form .form_block_button {
+  width: 41%;
+}
+.pluses_form_block form .form_block_button button {
+  width: 100%;
+  padding: 17px 70px;
+}
+.pluses_form_bottom {
+  display: flex;
+  justify-content: center;
+}
+.pluses_input {
+  width: 37%;
+}
+.pluses_check_block {
+  display: flex;
+}
+.pluses_check_block input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.pluses_check_block input + label:before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #fff;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.pluses_check_block input:checked + label:before {
+  border-color: #fff;
+  background-color: #fff;
+  background-image: url("../img/icons/Polygon.png");
+}
+.pluses_check_block p {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FAFAFA;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+.pluses_check_block p a {
+  display: block;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+  border-bottom: 1px dashed #FFFFFF;
 }
 .pluses_subtitle_block:before {
   content: '';
@@ -1015,6 +1105,12 @@ form a {
   .pluses_subtitle_block {
     padding: 40px 35px;
   }
+  .pluses_check_block {
+    justify-content: center;
+  }
+  .pluses_form_block form .form_block_button {
+    width: 76%;
+  }
   .documents_blocks {
     flex-wrap: wrap;
   }
@@ -1176,6 +1272,17 @@ form a {
   .pluses_subtitle_block p {
     font-size: 18px;
     line-height: 22px;
+  }
+  .pluses_form_block {
+    padding: 40px 15px;
+    max-width: 100%;
+  }
+  .pluses_form_block h5 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .pluses_form_block form .form_block_button {
+    width: 100%;
   }
   .documents_block_left h3 {
     font-size: 28px;

@@ -34,7 +34,6 @@ var swiper2 = new Swiper(".projects_slider_main", {
     var swiperTop = []
 
     $(".gallery-thumb").each(function (i) {
-        console.log($(this))
         swperThumb[i] = new Swiper($(this)[0], {
             loop: true,
             spaceBetween: 10,
@@ -93,6 +92,7 @@ var swiper = new Swiper(".docSlider", {
         $("#phone_mask_second").mask("+7 (999) 999-99-99");
         $("#phone_mask").mask("+7 (999) 999-99-99");
         $("#back_link_phone").mask("+7 (999) 999-99-99");
+        $("#pluses_phone").mask("+7 (999) 999-99-99");
     });
 
 

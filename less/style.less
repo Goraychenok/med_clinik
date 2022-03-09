@@ -630,6 +630,8 @@ form a{
 
 }
 .projects{
+  background: url("../img/projects_bg.png") no-repeat center center;
+  background-size: cover;
   &_title{
     font-family: Gilroy;
     font-style: normal;
@@ -645,30 +647,81 @@ form a{
   }
   &_slider{
     position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12), 0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+    border-radius: 20px;
+    padding: 60px;
+    margin-bottom: 40px;
     &_main{
       &_navigation{
         display: flex;
         position: absolute;
         top: 0;
         right: 0;
+        z-index: 9999;
       }
       &_all{
+        display: flex;
+        justify-content: space-between;
         &_left{
-          width: 45%;
+          width: 55%;
           &_slide{
             text-align: center;
+            margin-bottom: 30px;
             img{
-              width: 680px;
+              width: 100%;
               border-radius: 20px;
               aspect-ratio: 16/16 !important;
             }
           }
         }
+        &_right{
+          width: 32%;
+          padding: 50px 50px;
+          background: #F8FAFA;
+          box-shadow: 0px 6px 8px rgba(24, 39, 75, 0.12), 0px 8px 16px rgba(24, 39, 75, 0.08);
+          border-radius: 20px;
+          margin-bottom: 20px;
+
+        }
         &_bottom{
           &_slide{
             cursor: pointer;
-            &:hover{
+            transition: 0.3s ease-in-out;
+            &_bg{
+              position: relative;
 
+              &_ph{
+                width: 190px;
+                position: absolute;
+                aspect-ratio: 1 !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                left: 0;
+                background: rgba(0,0,0,0.2);
+                border-radius: 20px;
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+                svg{
+                  width: 30px;
+                  height: 30px;
+                }
+                &_svg{
+                  padding: 20px;
+                  background: rgba(250, 250, 250, 0.5);
+                  backdrop-filter: blur(4px);
+                  border-radius: 100px;
+                }
+              }
+            }
+            &:hover{
+              .projects_slider_main_all_bottom_slide_bg_ph{
+                opacity: 1;
+              }
+              .projects_slider_main_all_bottom_slide img{
+              }
             }
             img{
 
@@ -678,6 +731,18 @@ form a{
             }
           }
         }
+      }
+      &_block{
+        h5{
+          font-family: Gilroy;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 30px;
+          color: #000000;
+          margin-bottom: 36px;
+        }
+
       }
     }
   }
@@ -714,6 +779,48 @@ form a{
   }
 }
 }
+
+.projects_slider_main_all_right_block{
+  &_mini{
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+    h5{
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: #002C69;
+      margin-bottom: 0px;
+      width: 45%;
+    }
+    span{
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: #7D7D7D;
+    }
+    .projects_slider_main_all_right_block_black{
+      color: #333333;
+    }
+  }
+  p{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
 .mySwiper2{
   margin-bottom: 30px;
 }
@@ -722,6 +829,55 @@ form a{
 }
 .swiper-scrollbar-drag{
   background: @blue;
+}
+.sliderRightProjects_navigator{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h5{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+    color: #D62D30;
+    margin-bottom: 0;
+  }
+  &_left{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    svg{
+      margin-right: 20px;
+    }
+    path{
+      fill: #D62D30;
+    }
+  }
+  &_right{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    svg{
+      margin-left: 20px;
+    }
+    path{
+      fill: #D62D30;
+    }
+  }
+  .swiper-button-disabled{
+
+      cursor: default;
+
+
+    path{
+      fill: #D9D9D9;
+    }
+    h5{
+      color: #D9D9D9;
+    }
+  }
 }
 
 .swiper-pagination-bullet{
@@ -1271,7 +1427,58 @@ background-image: url("../img/plus.png");
 
 }
 
-
+.projects_form_bottom{
+  display: flex;
+  justify-content: center;
+  .pluses_form_block{
+    background: #FFFFFF;
+    box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12), 0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+    border-radius: 30px;
+    padding: 40px 50px;
+    width: 60%;
+    justify-content: flex-start;
+    h5{
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      color: #002C69;
+      text-align: left;
+      max-width: 100%;
+      span{
+        color: #D62D30;
+      }
+    }
+    form{
+      .pluses_input{
+        width: 42%;
+      }
+      .form_block_button{
+        width: 47%;
+        .pluses_check_block{
+          p{
+            color: #000;
+            a{
+              color: #37A7D5;
+              border-bottom-color:#37A7D5 ;
+            }
+          }
+        }
+        input:checked + label:before{
+          border-color: #62BFFF;
+          background-color: #62BFFF;
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+        }
+        input + label:before{
+          width: 14px;
+          height: 14px;
+          border: 1px solid #adb5bd;
+        }
+      }
+    }
+  }
+}
 
 
 @media (max-width: 1500px) {
@@ -1440,6 +1647,41 @@ background-image: url("../img/plus.png");
     }
     &_pol_block{
       align-items: start;
+    }
+  }
+
+  .projects{
+    &_slider{
+      padding: 40px 30px;
+      &_main{
+        &_all{
+          flex-wrap: wrap;
+          &_left{
+            width: 100%;
+            margin-bottom: 30px;
+          }
+          &_right{
+            width: 84%;
+          }
+        }
+      }
+    }
+  }
+  .projects_form_bottom{
+    .pluses_form_block{
+      justify-content: center;
+      h5{
+        text-align: center;
+        font-size: 22px;
+      }
+      form{
+        .pluses_input{
+          width: 65%;
+        }
+        .form_block_button{
+          width: 76%;
+        }
+      }
     }
   }
 }
@@ -1684,6 +1926,84 @@ background-image: url("../img/plus.png");
       p{
         font-size: 12px;
         line-height: 14px;
+      }
+    }
+  }
+  .projects{
+    &_tilte{
+      max-width: 100%;
+      margin-bottom: 20px;
+      font-size: 27px;
+      line-height: 35px;
+    }
+    &_slider{
+      padding: 20px;
+      &_main{
+        &_navigation{
+          right: auto;
+          left: 50%;
+          transform: translate( -50%);
+        }
+        &_block{
+          h5{
+            padding-top: 55px;
+            text-align: center;
+          }
+        }
+        &_all{
+          &_bottom_slide_bg{
+            img{
+              width: 150px;
+            }
+            &_ph{
+              width: 150px;
+            }
+          }
+          &_left{
+            &_slide{
+              img{
+                aspect-ratio: 16/14;
+              }
+            }
+          }
+          &_right{
+            padding: 30px 20px;
+            width: 87%;
+            &_block{
+              &_mini{
+                h5{
+                  padding-top: 0px;
+                  text-align: left;
+                  width: 51%;
+                }
+              }
+            }
+          }
+          .sliderRightProjects_navigator h5{
+            padding-top: 0;
+          }
+          .projects_slider_main_all_right_block_mini .projects_slider_main_all_right_block_black{
+            width: 56%;
+          }
+        }
+      }
+    }
+  }
+  .projects_form_bottom{
+    .pluses_form_block{
+      width: 100%;
+      padding: 15px 10px;
+      h5{
+        font-size: 18px;
+        line-height: 20px;
+      }
+      form{
+        .pluses_input{
+          width: 78%;
+        }
+        .form_block_button{
+          width: 89%;
+        }
       }
     }
   }

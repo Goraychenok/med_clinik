@@ -24,6 +24,7 @@
 var swiper2 = new Swiper(".projects_slider_main", {
     spaceBetween: 30,
     allowTouchMove: false,
+    loop: true,
     navigation: {
         nextEl: ".slider_project_navigation_next",
         prevEl: ".slider_project_navigation_prev",
@@ -32,17 +33,32 @@ var swiper2 = new Swiper(".projects_slider_main", {
 
     var swperThumb = []
     var swiperTop = []
+    var swiperRight = []
 
     $(".gallery-thumb").each(function (i) {
         swperThumb[i] = new Swiper($(this)[0], {
             loop: true,
             spaceBetween: 10,
-            slidesPerView: 3,
+            slidesPerView: 2,
             freeMode: true,
             watchSlidesProgress: true,
             scrollbar: {
                 el: ".swiper-scrollbar",
             },
+            breakpoints:{
+                500:
+                    {
+                        loop: true,
+                        spaceBetween: 10,
+                        slidesPerView: 3,
+                        freeMode: true,
+                        watchSlidesProgress: true,
+                        scrollbar: {
+                            el: ".swiper-scrollbar",
+                        },
+                    },
+            },
+
         });
 
 
@@ -62,6 +78,20 @@ $(".gallery-top").each(function (i) {
         thumbs: {
             swiper: swperThumb[i],
         },
+    });
+})
+
+$(".sliderRightProjects").each(function (i) {
+    swiperRight[i] =  new Swiper($(this)[0], {
+        spaceBetween: 10,
+        allowTouchMove: false,
+
+        navigation: {
+            nextEl: $(this).find('.sliderRightProjects_navigator_right')[0],
+            prevEl: $(this).find('.sliderRightProjects_navigator_left')[0],
+        },
+
+
     });
 })
 
@@ -94,6 +124,8 @@ var swiper = new Swiper(".docSlider", {
         $("#back_link_phone").mask("+7 (999) 999-99-99");
         $("#pluses_phone").mask("+7 (999) 999-99-99");
         $("#delivery_phone").mask("+7 (999) 999-99-99");
+        $("#projects_phone").mask("+7 (999) 999-99-99");
+
     });
 
 

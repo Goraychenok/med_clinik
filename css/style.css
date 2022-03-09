@@ -1461,6 +1461,117 @@ form a {
 .header__burger_block {
   display: none;
 }
+.footer {
+  background: #002C69;
+  padding-bottom: 40px;
+}
+.footer_container {
+  padding: 0;
+  position: relative;
+}
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_logo a {
+  display: flex;
+  align-items: center;
+}
+.footer_logo a svg {
+  margin-right: 17px;
+}
+.footer_logo a span {
+  width: 1px;
+  height: 50px;
+  background: #fff;
+}
+.footer_logo a p {
+  margin-left: 17px;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #D9D9D9;
+}
+.footer_list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+.footer_list li {
+  margin: 0px 0px 0px 30px;
+}
+.footer_list li a {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.footer_contacts_block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.footer_contacts_block svg {
+  margin-right: 10px;
+}
+.footer_contacts_block a {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 15px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+.footer_bottom {
+  padding-top: 100px;
+  text-align: center;
+}
+.footer_bottom a {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #CCCCCC;
+  text-decoration: none;
+  border-bottom: 1px dashed #CCCCCC;
+}
+.footer_bottom p {
+  padding-top: 16px;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #CCCCCC;
+}
+.footer_navigator {
+  position: absolute;
+  left: -25px;
+  bottom: 19px;
+  cursor: pointer;
+}
+.footer_navigator_block {
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg);
+}
+.footer_navigator_block h5 {
+  margin-right: 15px;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FAFAFA;
+}
 @media (max-width: 1500px) {
   .container {
     max-width: 1100px;
@@ -1703,6 +1814,33 @@ form a {
   }
   .header_bottom_container {
     padding: 20px 0;
+  }
+  .footer {
+    padding-bottom: 20px;
+  }
+  .footer_container {
+    padding: 0;
+  }
+  .footer_top {
+    flex-wrap: wrap;
+  }
+  .footer_logo {
+    order: 1;
+  }
+  .footer_list {
+    order: 3;
+    margin-top: 40px;
+    width: 100%;
+    justify-content: center;
+  }
+  .footer_contacts {
+    order: 2;
+  }
+  .footer_bottom {
+    padding-top: 40px;
+  }
+  .footer_navigator {
+    bottom: 45px;
   }
 }
 @media (max-width: 500px) {
@@ -1981,5 +2119,22 @@ form a {
   }
   .header__list {
     display: block;
+  }
+  .footer_top {
+    justify-content: center;
+  }
+  .footer_log {
+    width: 100%;
+  }
+  .footer_list {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .footer_contacts {
+    margin-top: 20px;
+  }
+  .footer_navigator {
+    bottom: 40%;
   }
 }

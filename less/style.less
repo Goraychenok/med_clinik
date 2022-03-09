@@ -437,6 +437,7 @@ a:focus{
 
 .main{
   &_block{
+    padding-top: 100px;
     background: url("../img/bg.png") no-repeat center center;
     background-size: cover;
   }
@@ -1658,6 +1659,9 @@ background-image: url("../img/plus.png");
   align-items: center;
   z-index: 9999;
 }
+.header__burger_block{
+  display: none;
+}
 @media (max-width: 1500px) {
   .container{
     max-width: 1100px;
@@ -1673,6 +1677,85 @@ background-image: url("../img/plus.png");
 }
 
 @media (max-width: 1000px) {
+.header__burger_block{
+  display: flex;
+  align-items: center;
+  p{
+    margin-left: 17px;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #002C69;
+  }
+}
+  .header__burger{
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+    border-radius: 0.5rem;
+
+  }
+  .header__burger:before,
+  .header__burger:after{
+    border-radius: 0.5rem;
+    content: '';
+    background-color: #002C69;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before{
+    top: 0px;
+    border-radius: 0.5rem;
+  }
+  .header__burger:after{
+    bottom: 0px;
+    border-radius: 0.5rem;
+  }
+  .header__burger.active:before{
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active:after{
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header__burger.active span{
+    transform: scale(0);
+  }
+  .header__burger span{
+    border-radius: 0.5rem;
+    position: absolute;
+    background-color: #002C69;
+    left: 0;
+    width: 100%;
+
+    height: 3px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  .header__menu{
+    position: fixed;
+    top: -108%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fff;
+    padding: 70px 10px 0px 30px;
+    transition: all 0.3s ease 0s;
+    text-align: left;
+    opacity: 0.95;
+  }
+  .header__menu.active{
+    top:80px;
+  }
   .mobile_form{
     display: block;
     max-width: 75%;
@@ -1686,6 +1769,9 @@ background-image: url("../img/plus.png");
     padding: 40px 0;
   }
   .main{
+    &_block{
+      padding-top: 160px;
+    }
     &_left{
       &_block{
         width: 100%;
@@ -1860,6 +1946,12 @@ background-image: url("../img/plus.png");
         }
       }
     }
+  }
+  .header_top_container{
+    padding: 20px 0;
+  }
+  .header_bottom_container{
+    padding: 20px 0;
   }
 }
 @media (max-width: 500px) {

@@ -172,6 +172,12 @@ a:focus {
   margin: 0 auto;
   padding: 80px 0;
 }
+a {
+  transition: 0.3s ease-in-out;
+}
+a:hover {
+  filter: drop-shadow(0px 4px 6px rgba(255, 255, 255, 0.5));
+}
 .header {
   position: fixed;
   width: 100%;
@@ -267,6 +273,9 @@ a:focus {
   /* black */
   color: #333333;
 }
+.header_bottom.active {
+  background: #fff;
+}
 .header__burger {
   display: none;
 }
@@ -279,6 +288,10 @@ a:focus {
 .header__list li {
   list-style: none;
   margin: 10px 0px 0px 45px;
+  transition: 0.3s ease-in-out;
+}
+.header__list li:hover a {
+  filter: drop-shadow(0px 4px 6px rgba(98, 191, 255, 0.8));
 }
 .header__link {
   font-family: Gilroy;
@@ -290,6 +303,9 @@ a:focus {
   /* identical to box height */
   /* black */
   color: #333333;
+}
+.header__list li .active {
+  color: #62bfff;
 }
 .button {
   padding: 17px 116px;
@@ -1939,5 +1955,31 @@ form a {
   }
   .projects_form_bottom .pluses_form_block form .form_block_button {
     width: 89%;
+  }
+  .header__menu {
+    top: -111%;
+  }
+  .header_top_all {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 60px;
+  }
+  .header_top_map {
+    margin-bottom: 20px;
+  }
+  .header_bottom_logo a p {
+    display: none;
+  }
+  .header_bottom_logo a span {
+    display: none;
+  }
+  .main_block {
+    padding-top: 180px;
+  }
+  .header__menu.active {
+    top: 100px;
+  }
+  .header__list {
+    display: block;
   }
 }

@@ -30,10 +30,66 @@ var swiper2 = new Swiper(".projects_slider_main", {
         prevEl: ".slider_project_navigation_prev",
     },
 });
+var swiper3 = new Swiper(".rangeSliderMain", {
+    spaceBetween: 30,
+    allowTouchMove: false,
+    /*
+   loop: true,
+ */
+   navigation: {
+       nextEl: ".slider_range_navigation_next",
+       prevEl: ".slider_range_navigation_prev",
+   },
+
+
+});
 
     var swperThumb = []
     var swiperTop = []
     var swiperRight = []
+    var swiperRangeTop = []
+    var swiperRangeThumb = []
+
+$(".gallery-thumb-range").each(function (i) {
+    swiperRangeThumb[i] = new Swiper($(this)[0], {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 2,
+        freeMode: true,
+        watchSlidesProgress: true,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+        },
+        direction: "vertical",
+        breakpoints:{
+            500:
+                {
+                    direction: "vertical",
+                    spaceBetween: 10,
+                    slidesPerView: "5",
+                    mousewheel: true,
+                    freeMode: true,
+                    watchSlidesProgress: true,
+                    scrollbar: {
+                        el: ".swiper-scrollbar",
+                    },
+                },
+        },
+
+    });
+
+
+})
+$(".gallery-top-range").each(function (i) {
+    swiperRangeTop[i] =  new Swiper($(this)[0], {
+        loop: true,
+        spaceBetween: 10,
+        allowTouchMove: false,
+        thumbs: {
+            swiper: swiperRangeThumb[i],
+        },
+    });
+})
 
     $(".gallery-thumb").each(function (i) {
         swperThumb[i] = new Swiper($(this)[0], {
@@ -68,13 +124,7 @@ $(".gallery-top").each(function (i) {
     swiperTop[i] =  new Swiper($(this)[0], {
         loop: true,
         spaceBetween: 10,
-        /*
-        navigation: {
-            nextEl: $(this).find('.swiper-button-next')[0],
-            prevEl: ".swiper-button-prev",
-        },
-
-         */
+        allowTouchMove: false,
         thumbs: {
             swiper: swperThumb[i],
         },

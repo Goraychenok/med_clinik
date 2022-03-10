@@ -52,29 +52,23 @@ var swiper3 = new Swiper(".rangeSliderMain", {
 
 $(".gallery-thumb-range").each(function (i) {
     swiperRangeThumb[i] = new Swiper($(this)[0], {
-        loop: true,
-        spaceBetween: 10,
-        slidesPerView: 2,
-        freeMode: true,
-        watchSlidesProgress: true,
-        scrollbar: {
-            el: ".swiper-scrollbar",
-        },
-        direction: "vertical",
-        breakpoints:{
-            500:
-                {
-                    direction: "vertical",
-                    spaceBetween: 10,
-                    slidesPerView: "5",
-                    mousewheel: true,
-                    freeMode: true,
-                    watchSlidesProgress: true,
-                    scrollbar: {
-                        el: ".swiper-scrollbar",
-                    },
-                },
-        },
+        direction: 'vertical', // вертикальная прокрутка
+        slidesPerView: 3, // показывать по 3 превью
+        spaceBetween: 24, // расстояние между слайдами
+        freeMode: true, // при перетаскивании превью ведет себя как при скролле
+        breakpoints: { // условия для разных размеров окна браузера
+            0: { // при 0px и выше
+                direction: 'horizontal',
+                slidesPerView: 2,// горизонтальная прокрутка
+            },
+            500: {
+                slidesPerView: 3,
+                direction: 'horizontal',
+            },
+            1000: { // при 768px и выше
+                direction: 'vertical', // вертикальная прокрутка
+            }
+        }
 
     });
 
@@ -82,7 +76,6 @@ $(".gallery-thumb-range").each(function (i) {
 })
 $(".gallery-top-range").each(function (i) {
     swiperRangeTop[i] =  new Swiper($(this)[0], {
-        loop: true,
         spaceBetween: 10,
         allowTouchMove: false,
         thumbs: {
@@ -179,14 +172,7 @@ var swiper = new Swiper(".docSlider", {
     });
 
 
-$(".inpit_email").on("keypress", function(e) {
 
-    var char = /["a-zA-Z]/;
-    var val = String.fromCharCode(e.which);
-    var test = char.test(val);
-
-    if(!test) return false
-})
 
 
 
@@ -224,4 +210,8 @@ jQuery(window).scroll(function() {
         jQuery('.header_bottom').removeClass('active');
     }
 
+});
+
+$(document).ready(function(){
+    $(".inpit_email").inputmask("email")
 });

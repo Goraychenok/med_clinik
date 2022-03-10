@@ -53,9 +53,12 @@ var swiper3 = new Swiper(".rangeSliderMain", {
 $(".gallery-thumb-range").each(function (i) {
     swiperRangeThumb[i] = new Swiper($(this)[0], {
         direction: 'vertical', // вертикальная прокрутка
-        slidesPerView: 3, // показывать по 3 превью
+        slidesPerView: 4, // показывать по 3 превью
         spaceBetween: 24, // расстояние между слайдами
         freeMode: true, // при перетаскивании превью ведет себя как при скролле
+        scrollbar: {
+            el: ".swiper-scrollbar",
+        },
         breakpoints: { // условия для разных размеров окна браузера
             0: { // при 0px и выше
                 direction: 'horizontal',
@@ -142,16 +145,51 @@ $(".sliderRightProjects").each(function (i) {
 
 
 
-var swiper = new Swiper(".docSlider", {
-    loop: true,
+var docSlider = new Swiper(".docSlider", {
+    //loop: true,
     allowTouchMove: false,
     navigation: {
         nextEl: ".slider_doc_next",
         prevEl: ".slider_doc_prev",
     },
+    on: {
+        slideChangeTransitionEnd: function (swiper) {
+            const currentIndex = swiper.activeIndex
+            const $slide = $(`.docSlider .swiper-slide-active`)
+            const forAttr = $slide.attr('data-for')
+            $(`#${forAttr}`).prop('checked', true)
+
+        },
+    },
 
 });
 
+var parthers = new Swiper(".swiperParthers", {
+
+    slidesPerView: 4,
+    spaceBetween:40,
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints:{
+        0: { // при 0px и выше
+            slidesPerView: 1,
+        },
+        500: {
+            slidesPerView: 3,
+
+        },
+        1000: { // при 768px и выше
+            slidesPerView: 4,
+        }
+
+    }
+
+});
 
 
 
@@ -177,6 +215,17 @@ var swiper = new Swiper(".docSlider", {
 
 
 jQuery(document).ready(function() {
+
+    $("input[name='documents']" ).change(function(e){
+        const id = $(this).attr('id');
+        const $slide = $(`.docSlider .swiper-slide[data-for="${id}"]`)
+        const index = $slide.index()
+        docSlider.slideTo(index, 600, false);
+        console.log(index)
+
+    })
+
+
     $('.header__burger').click(function(event) {
         $('.header__burger,.header__menu').toggleClass('active');
         $('body').toggleClass('lock');
